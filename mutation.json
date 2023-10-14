@@ -1,0 +1,290 @@
+[
+  {
+    "type": "mutation_category",
+    "id": "DAEMON",
+    "name": "Demonic",
+    "threshold_mut": "",
+    "mutagen_message": "You found that Hell *is* already here, and succumbed into its fell power.",
+    "iv_message": ""
+  },
+	{
+  "type": "mutation",
+  "id": "DEMONICNAT",
+  "name": {
+    "str": "Demonic Visage"
+  },
+  "points": -2,
+  "visibility": 10,
+  "ugliness": 5,
+  "description": "Your visage is disquieting and liable to induce uncanny feeling.  People can feel that there is something off about you and as a result, they will not want to interact with you unless they need to.",
+	"prereqs" : [ "HOOVES", "WINGS_BAT", "TAIL_FIEND" ],
+  "category": [
+    "DAEMON", "CHIMERA"
+  ]
+},
+  {
+    "type": "mutation",
+    "id": "GROWL",
+    "copy-from": "GROWL",
+    "extend": { "category": [ "DAEMON" ] }
+  },
+  {
+    "type": "mutation",
+    "id": "SNARL",
+    "copy-from": "SNARL",
+    "extend": { "category": [ "DAEMON" ] }
+  },
+  {
+    "type": "mutation",
+    "id": "BADTEMPER",
+    "copy-from": "BADTEMPER",
+    "extend": { "category": [ "DAEMON" ] }
+  },
+  {
+    "type": "mutation",
+    "id": "HISS",
+    "copy-from": "CANNIBAL",
+    "extend": { "category": [ "DAEMON" ] }
+  },
+  {
+    "type": "mutation",
+    "id": "UGLY",
+    "copy-from": "UGLY",
+    "extend": { "category": [ "DAEMON" ] }
+  },
+  {
+    "type": "mutation",
+    "id": "DEFORMED",
+    "copy-from": "DEFORMED",
+    "extend": { "category": [ "DAEMON" ] }
+  },
+  {
+    "type": "mutation",
+    "id": "DEFORMED2",
+    "copy-from": "DEFORMED2",
+    "extend": { "category": [ "DAEMON" ] }
+  },
+  {
+    "type": "mutation",
+    "id": "DEFORMED3",
+    "copy-from": "DEFORMED3",
+    "extend": { "category": [ "DAEMON" ] }
+  },
+  {
+    "type": "mutation",
+    "id": "SMELLY",
+    "copy-from": "SMELLY",
+    "extend": { "category": [ "DAEMON" ] }
+  },
+  {
+    "type": "mutation",
+    "id": "SMELLY2",
+    "copy-from": "SMELLY2",
+    "extend": { "category": [ "DAEMON" ] }
+  },
+  {
+    "type": "mutation",
+    "id": "RAP_TALONS",
+    "copy-from": "RAP_TALONS",
+    "extend": { "category": [ "DAEMON" ] }
+  },
+  {
+    "type": "mutation",
+    "id": "UNSTABLE",
+    "copy-from": "UNSTABLE",
+    "extend": { "category": [ "DAEMON" ] }
+  },
+  {
+    "type": "mutation",
+    "id": "FORKED_TONGUE",
+    "copy-from": "FORKED_TONGUE",
+    "extend": { "category": [ "DAEMON" ] }
+  },
+  {
+    "type": "mutation",
+    "id": "CLAWS",
+    "copy-from": "CLAWS",
+    "extend": { "category": [ "DAEMON" ] }
+  },
+  {
+    "type": "mutation",
+    "id": "NAILS",
+    "copy-from": "NAILS",
+    "extend": { "category": [ "DAEMON" ] }
+  },
+  {
+    "type": "mutation",
+    "id": "SCALES",
+    "copy-from": "SCALES",
+    "extend": { "category": [ "DAEMON" ] }
+  },
+  {
+    "type": "mutation",
+    "id": "FANGS",
+    "copy-from": "FANGS",
+    "extend": { "category": [ "DAEMON" ] }
+  },
+  {
+    "type": "mutation",
+    "id": "INFRARED",
+    "copy-from": "INFRARED",
+    "extend": { "category": [ "DAEMON" ] }
+  },
+  {
+    "type": "mutation",
+    "id": "TERRIFYING",
+    "copy-from": "TERRIFYING",
+    "extend": { "category": [ "DAEMON" ] }
+  },
+  {
+    "type": "mutation",
+    "id": "PRETTY",
+    "copy-from": "PRETTY",
+    "extend": { "category": [ "DAEMON" ] }
+  },
+  {
+    "type": "mutation",
+    "id": "BEAUTIFUL",
+    "copy-from": "BEAUTIFUL",
+    "extend": { "category": [ "DAEMON" ] }
+  },
+  {
+    "type": "mutation",
+    "id": "BEAUTIFUL2",
+    "copy-from": "BEAUTIFUL2",
+    "extend": { "category": [ "DAEMON" ] }
+  },
+  {
+    "type": "mutation",
+    "id": "KILLER",
+    "copy-from": "KILLER",
+    "extend": { "category": [ "DAEMON" ] }
+  },
+  {
+    "type": "mutation",
+    "id": "WINGS_BAT",
+    "copy-from": "WINGS_BAT",
+    "extend": { "category": [ "DAEMON" ] }
+  },
+  {
+    "type": "mutation",
+    "id": "PALE",
+    "copy-from": "PALE",
+    "extend": { "category": [ "DAEMON" ] }
+  },
+  {
+    "type": "mutation",
+    "id": "TROGLO",
+    "copy-from": "TROGLO",
+    "extend": { "category": [ "DAEMON" ] }
+  },
+  {
+    "type": "mutation",
+    "id": "LIAR",
+    "copy-from": "LIAR",
+    "extend": { "category": [ "DAEMON" ] }
+  },
+  {
+    "type": "mutation",
+    "id": "CANNIBAL",
+    "copy-from": "CANNIBAL",
+    "extend": { "category": [ "DAEMON" ] }
+  },
+    {
+    "type": "mutation",
+    "id": "PYROMANIA",
+    "copy-from": "PYROMANIA",
+    "extend": { "category": [ "DAEMON" ] }
+  },
+  {
+    "type": "mutation",
+    "id": "PSYCHOPATH",
+    "copy-from": "PSYCHOPATH",
+    "extend": { "category": [ "DAEMON" ] }
+  },
+    {
+    "type": "mutation",
+    "id": "HOOVES",
+    "copy-from": "HOOVES",
+    "extend": { "category": [ "DAEMON" ] }
+  },
+  {
+    "type": "mutation",
+    "id": "TAIL_THICK",
+    "copy-from": "TAIL_THICK",
+    "extend": { "category": [ "DAEMON" ] }
+  },
+  {
+    "type": "mutation",
+    "id": "HORNS",
+    "copy-from": "HORNS",
+    "extend": { "category": [ "DAEMON" ] }
+  },
+  {
+    "type": "mutation",
+    "id": "HORNS_POINTED",
+    "copy-from": "HORNS_POINTED",
+    "extend": { "category": [ "DAEMON" ] }
+  },
+  {
+    "type": "mutation",
+    "id": "HORNS_CURLED",
+    "copy-from": "HORNS_CURLED",
+    "extend": { "category": [ "DAEMON" ] }
+  },
+		{
+		"type" : "mutation",
+		"id" : "DEMONIC_FORM",
+		"name" : "Demonic Form",
+		"points" : 6,
+		"visibility" : 10,
+		"ugliness" : -26,
+		"description" : "Your advanced demonic form trigger some antediluvian power that dulls other human instinct.  No matter how disturbing you actually look, everyone looking upon your form is covinced that you are one of the fairest being of the age, a primordial beauty incarnate.  It almost as if your mind and spirit became strong enough to glamour your body into holding the form of humanity.",
+		"//": "maybe remove treshreq, make new trait in the styles of arcana inner heat/other fiery spellgivin trait which related to monspell, and use this new trait to replace treshreq",
+		"prereqs" : [ "DEMONICNAT", "FORKED_TONGUE", "LIAR" ],
+		"category" : [ "CHIMERA", "DAEMON" ]
+	},
+		{
+		"type" : "mutation",
+		"id" : "FLAMEFIEND",
+		"name" : "Demonic Power",
+		"points" : 3,
+		"visibility" : 0,
+		"ugliness" : 3,
+		"description" : "Your control upon your power have advances enough to let you hold some measure of dominion upon the unseen forces.  Sometimes your strike will blast your enemy with unseen wind.",
+		"prereqs": ["DEMONIC_FORM", "KILLER"],
+		"category" : [ "DAEMON" ],
+		"attacks": {
+    "attack_text_u": "You blast %s with unnatural wind",
+    "attack_text_npc": "%1$s blast %2$s with unnatural wind",
+    "chance": 25,
+    "strength_damage": {
+      "damage_type": "bash",
+      "amount": 10
+    }
+  }
+	},
+		{
+		"type" : "mutation",
+		"id" : "TAIL_FIEND",
+		"name" : "Demonic Tail",
+		"points" : 1,
+		"visibility" : 4,
+		"ugliness" : 4,
+		"description" : "You have a spaded, leather tail, like that of a Demon.  It doesn't seem to improve your balance nearly at all.  It also prevents you from wearing regular leg armor.",
+		"prereqs" : ["TAIL_THICK"],
+		"cancels" : ["TAIL_FIN", "TAIL_RAPTOR", "TAIL_FLUFFY", "TAIL_STING", "TAIL_CLUB", "TAIL_RAT", "TAIL_CATTLE", "TAIL_LONG"],
+		"category" : [ "DAEMON" ],
+		"restricts_gear" : [ "leg_l", "leg_r" ],
+		"allow_soft_gear" : true,
+		"attacks": {
+    "attack_text_u": "You slap %s with your tail",
+    "attack_text_npc": "%1$s slaps %2$s with their tail",
+    "chance": 30,
+    "strength_damage": {
+      "damage_type": "bash",
+      "amount": 3
+    }
+  }
+	}
+]

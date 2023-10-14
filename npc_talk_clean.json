@@ -1,0 +1,45 @@
+[
+  {
+    "id": [ "TALK_FRIEND", "TALK_GIVE_ITEM", "TALK_USE_ITEM" ],
+    "type": "talk_topic",
+    "dynamic_line": "…",
+    "responses": [
+	  {
+		"text": "…please, let me help you.",
+		"topic": "TALK_NPC_CLEAN_FILTH",
+		"condition": { 
+		    "and": [
+			{ "not": { "npc_has_effect": "lust_demoneff" } },
+			{ "not": { "u_has_effect": "lust_demoneff" } },
+			{ "npc_has_item": "daemonpreg_fluidwear" },
+		{ "npc_has_item": "daemonpreg_fluidwear_fert" }
+			] 
+		},
+	  "effect": "morale_chat_activity"
+	  }
+    ]
+  },
+  {
+    "type": "talk_topic",
+    "id": "TALK_NPC_CLEAN_FILTH",
+    "dynamic_line": "…be quick, please. Don't make this weird.",
+    "responses": [
+	  {
+	  "text": "Yes…",
+	  "topic": "TALK_DONE",
+	  "condition": { "npc_has_item": "daemonpreg_fluidwear" },
+	  "effect": { "u_buy_item": "daemonpreg_fluidwear" }
+	  },
+	  {
+	  "text": "Yes…",
+	  "topic": "TALK_DONE",
+	  "condition": { "npc_has_item": "daemonpreg_fluidwear_fert" },
+	  "effect": { "u_buy_item": "daemonpreg_fluidwear_fert" }
+	  },
+	  {
+	  "text": "…I've changed my mind.",
+	  "topic": "TALK_DONE"
+	  }
+    ]
+  }
+]

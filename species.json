@@ -1,0 +1,31 @@
+[
+	{
+		"type" : "SPECIES",
+		"id" : "FIEND",
+    "name": { "str": "hell demon" },
+    "description": "a freshly corrupted human, recently turnrd into a sinful monster"
+	},
+	{
+		"type" : "SPECIES",
+		"id" : "CUBI",
+		"anger_triggers" : ["FIRE", "FRIEND_ATTACKED"],
+    "name": { "str": "hell demon" },
+		"fear_triggers" : ["HURT", "FRIEND_DIED"],
+		"placate_triggers": [ "PLAYER_CLOSE", "PLAYER_WEAK", "STALK" ]
+	},
+	{
+		"type": "SPECIES",
+		"id": "MALE",
+    "name": { "str": "male hell demon" }
+	},
+	{
+		"type": "SPECIES",
+		"id": "FEMALE",
+    "name": { "str": "female hell demon" }
+	},
+	{
+		"type": "SPECIES",
+		"id": "HERM",
+    "name": { "str": "omnibus hell demon" }
+	}
+]

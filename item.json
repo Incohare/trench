@@ -1,0 +1,510 @@
+[
+	  {
+    "id": "bot_conjucall",
+    "//": "ID retained to avoid any weirdness.",
+    "type": "TOOL",
+    "name": { "str": "conjurer magic" },
+    "description": "Spawns a lesser succubus, used by the demon conjurer.  This is a bug if you find one of these.",
+    "material": [ "flesh" ],
+    "symbol": ",",
+    "color": "cyan",
+    "use_action": { "type": "place_monster", "monster_id": "mon_dark_summoner", "place_randomly": true }
+  },
+	  {
+    "id": "bot_witchcall",
+    "//": "ID retained to avoid any weirdness.",
+    "type": "TOOL",
+    "name": { "str": "conjurer magic" },
+    "description": "Spawns a lesser succubus, used by the demon conjurer.  This is a bug if you find one of these.",
+    "material": [ "flesh" ],
+    "symbol": ",",
+    "color": "cyan",
+    "use_action": { "type": "place_monster", "monster_id": "mon_dark_witch", "place_randomly": true }
+  },
+	  {
+    "id": "bot_succumid",
+    "//": "ID retained to avoid any weirdness.",
+    "type": "TOOL",
+    "name": { "str": "demongoat magic" },
+    "description": "Spawns a succubus, used by the goathead demon.  This is a bug if you find one of these.",
+    "material": [ "flesh" ],
+    "symbol": ",",
+    "color": "cyan",
+    "use_action": { "type": "place_monster", "monster_id": "mon_succubi", "place_randomly": true }
+  },
+	  {
+    "id": "bot_incumid",
+    "//": "ID retained to avoid any weirdness.",
+    "type": "TOOL",
+    "name": { "str": "demongoat magic" },
+    "description": "Spawns a lesser succubus, used by the goathead demon.  This is a bug if you find one of these.",
+    "material": [ "flesh" ],
+    "symbol": ",",
+    "color": "cyan",
+    "use_action": { "type": "place_monster", "monster_id": "mon_incubi", "place_randomly": true }
+  },
+	  {
+    "id": "bot_vlesser_demon",
+    "//": "ID retained to avoid any weirdness.",
+    "type": "TOOL",
+    "name": { "str": "conjurer magic" },
+    "description": "Spawns a lesser succubus, used by the demon conjurer.  This is a bug if you find one of these.",
+    "material": [ "flesh" ],
+    "symbol": ",",
+    "color": "cyan",
+    "use_action": { "type": "place_monster", "monster_id": "mon_lessor_succubi", "place_randomly": true }
+  },
+      {
+    "id": "bot_plesser_demon",
+    "//": "ID retained to avoid any weirdness.",
+    "type": "TOOL",
+    "name": { "str": "witch magic" },
+    "description": "Spawns a lesser incubus, used by dark witch.  This is a bug if you find one of these.",
+    "material": [ "flesh" ],
+    "symbol": ",",
+    "color": "cyan",
+    "use_action": { "type": "place_monster", "monster_id": "mon_lessor_incubi", "place_randomly": true }
+  },
+		{
+		"id": "fake_whip",
+		"type": "GUN",
+		"copy-from": "fake_item",
+		"name": "succubi_whip",
+		"description": "Dummy item used for monster attack.  If you see this, then something went wrong.",
+		"flags": [ "NEVER_JAMS" ],
+		"ammo_effects": [ "BLINDS_EYES", "NEVER_MISFIRES", "WIDE", "BEANBAG" ],
+		"skill": "rifle",
+		"durability": 10,
+		"range" : 3,
+		"dispersion" : 750,
+		"ranged_damage" : {
+			"damage_type": "cut",
+			"amount": 5
+		}
+	},
+        {
+    "id": "coomgun_phallo",
+    "copy-from": "fake_item",
+    "type": "GUN",
+    "symbol": "/",
+    "color": "red",
+    "name": { "str": "coomgun" },
+    "ranged_damage": { "damage_type": "bash", "amount": 1 },
+    "description": "Shoots coom.  If you're seeing this, it's a bug.",
+    "skill": "launcher",
+    "range": 25,
+    "flags": [ "NEVER_JAMS" ],
+    "ammo_effects": [ "COOMTRAIL_EFFER", "NEVER_MISFIRES" ]
+  },
+	{
+		"id": "d_cum",
+		"type": "COMESTIBLE",
+		"name": { "str": "demonic fluid" },
+		"weight": "28 g",
+		"color": "pink",
+		"spoils_in": 8,
+		"//": "container::condom",
+		"comestible_type": "DRINK",
+		"symbol": "~",
+		"quench": -5,
+		"healthy": -1,
+		"nutrition": 1,
+		"description": "This sticky viscous liquid obviously belonged to a non-human being.  Drinking it might cause mutations.",
+		"price": 0,
+		"material": [ "flesh", "water" ],
+		"volume": "100 ml",
+		"phase": "liquid",
+		"fun": -50,
+		"freezing_point": -99,
+		"vitamins": [ [ "calcium", 6 ], [ "iron", 6 ], [ "vitC", 6 ], [ "vitB", 6 ] ],
+         "flags": [ "NO_INGEST", "EATEN_COLD", "NPC_SAFE", "NUTRIENT_OVERRIDE" ],
+		"use_action" : [
+		{
+			"type" : "mutagen",
+			"mutation_category" : "DAEMON"
+        }
+	  ]
+	},
+	  {
+    "abstract": "demonscroll_magic_base",
+    "type": "COMESTIBLE",
+    "comestible_type": "MED",
+    "category": "tools",
+    "name": { "str": "scroll base" },
+    "weight": "415 g",
+    "volume": "250 ml",
+    "material": [ "paper" ],
+    "symbol": "!",
+    "looks_like": "recipe_creepy",
+    "color": "white",
+    "stack_size": 1,
+    "flags": [ "NO_SALVAGE", "NO_INGEST", "NUTRIENT_OVERRIDE" ]
+  },
+	  {
+    "id": "d_cum_antiexploit",
+    "copy-from": "demonscroll_magic_base",
+    "type": "COMESTIBLE",
+    "name": { "str": "demon filth", "str_pl": "demon filth" },
+    "description": "This is a scraped out demon filth, taken from yourself.  You can drop it to clean it from yourself, or maybe try gathering them for its corruptive nature",
+    "price": "0 USD",
+    "drop_action": { "type": "emit_actor" },
+    "price_postapoc": "0 USD",
+    "use_action": { "type": "cast_spell", "spell_id": "d_cum_itemspell_antiexploit", "no_fail": true, "level": 0 }
+  },
+  {
+	"id": "demonic_sperm_type",
+	"name": "sperm",
+	"default": "d_cum_fert",
+	"type": "ammunition_type"
+  },
+  {
+	"type": "AMMO",
+	"id": "d_cum_fert",
+	"name": { "str": "fertile demonic sperm", "str_pl": "fertile demon sperm" },
+	"description": "Someone who know their ways around demonic sex rites might find some use out of this, but not you.",
+	"category": "OTHER",
+	"weight": "0 g",
+	"color": "white",
+	"symbol": "~",
+	"flags": [ "ZERO_WEIGHT" ],
+	"material": "flesh",
+	"ammo_type": "demonic_sperm_type",
+	"effects": [ "NEVER_MISFIRES", "NON-FOULING" ]
+  },
+	{
+		"id": "sailor_dress",
+		"type": "ARMOR",
+		"name": "schoolgirl uniform",
+		"description": "An upper garment with a peculiar collar and torso design.  It is popular worldwide from the late 19th century to the early 20th century, and is wildly spread in cosplay culture as well as being used as a uniform for female students in Japan.",
+		"weight": 200,
+		"volume": 4,
+		"price": 50000,
+		"material": [ "cotton" ],
+		"symbol": "[",
+		"color": "blue",
+		"covers": [ "torso", "arms" ],
+		"looks_like": "dress",
+		"coverage": 85,
+		"encumbrance": 5,
+		"storage": "100 ml",
+		"warmth": 5,
+		"material_thickness": 1,
+		"flags": [ "VARSIZE", "FANCY" ]
+	},
+	{
+		"id": "flintlock_ammo_magic",
+		"type": "AMMO",
+		"name": "paper cartridge (magic bullet)",
+		"description": "A paper cartridge containing black powder and a metallic projectile.  The projectile itself is covered with magic pattern.  It is said that every shot will always hit what you desire, however the last one will hit what you don't want the most.  After hitting its first target, the projectile will then ricochet at the next target.",
+		"weight": 40,
+		"volume": 1,
+		"price": 1100,
+		"material": [ "lead", "powder" ],
+		"symbol": "=",
+		"color": "white",
+		"count": 7,
+		"stack_size": 7,
+		"ammo_type": "flintlock",
+		"range": 6,
+		"damage": 50,
+		"dispersion": 90,
+		"recoil": 1500,
+		"loudness": 70,
+		"effects": [ "COOKOFF", "MUZZLE_SMOKE", "SHOT", "BOUNCE", "NEVER_MISFIRES" ]
+	},
+  	  {
+    "id": "scroll_mastercontracc",
+    "//": "ID retained to avoid any weirdness.",
+    "type": "TOOL",
+    "name": { "str": "grand demonic contract" },
+    "description": "A contract of demonic make, written upon parchment.  Reading its content loudly will bring forth a goathead demon, to call upon and bound upon a covenant.  Your chance of success will depend on how well you could negotiate a contract with them.",
+    "weight": "415 g",
+    "volume": "250 ml",
+    "material": [ "flesh" ],
+    "symbol": "!",
+    "looks_like": "recipe_creepy",
+    "color": "white",
+    "price": "1500 USD",
+    "price_postapoc": "10 USD",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_goathead_demon",
+      "friendly_msg": "The demon looks down at you imperiously, as if waiting for your  questions.",
+      "hostile_msg": "The goathead demon looks down at you imperiously, wroth written upon its face for your impudence!",
+      "difficulty": 8,
+      "moves": 60,
+      "place_randomly": true,
+      "is_pet": true,
+      "skills": [ "speech", "barter" ]
+    },
+    "flags": [ "NO_SALVAGE" ]
+    },
+  	  {
+    "id": "scroll_peepeedemon_contract",
+    "//": "ID retained to avoid any weirdness.",
+    "type": "TOOL",
+    "name": { "str": "demonic contract" },
+    "description": "A contract of demonic make, written upon parchment.  Reading its content loudly will bring forth a goathead demon, to call upon and bound upon a covenant.  Your chance of success will depend on how well you could negotiate a contract with them.",
+    "weight": "415 g",
+    "volume": "250 ml",
+    "material": [ "flesh" ],
+    "symbol": "!",
+    "looks_like": "recipe_creepy",
+    "color": "white",
+    "price": "1500 USD",
+    "price_postapoc": "10 USD",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_incubi_phalloplas",
+      "friendly_msg": "The demon looks down at you imperiously, as if waiting for your  ministration.",
+      "hostile_msg": "The demon looks down at you in a cruel smirk, their lust apparent as they reach for your body!",
+      "difficulty": 5,
+      "moves": 60,
+      "place_randomly": true,
+      "is_pet": true,
+      "skills": [ "speech", "barter" ]
+    },
+    "flags": [ "NO_SALVAGE" ]
+    },
+  	  {
+    "id": "scroll_killacontracc",
+    "//": "ID retained to avoid any weirdness.",
+    "type": "TOOL",
+    "name": { "str": "murderous demonic contract" },
+    "description": "A contract of demonic make, written upon parchment.  Reading its content loudly will bring forth a murderous demon, to call upon and bound upon a covenant.  Your chance of success will depend on how well you could negotiate a contract with them.",
+    "weight": "415 g",
+    "volume": "250 ml",
+    "material": [ "flesh" ],
+    "symbol": "!",
+    "looks_like": "recipe_creepy",
+    "color": "white",
+    "price": "1500 USD",
+    "price_postapoc": "10 USD",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_incubi_hoplophilia",
+      "friendly_msg": "The demon looks down at you imperiously, as if waiting for your  questions.",
+      "hostile_msg": "The goathead demon looks down at you imperiously, wroth written upon its face for your impudence!",
+      "difficulty": 6,
+      "moves": 60,
+      "place_randomly": true,
+      "is_pet": true,
+      "skills": [ "speech", "barter" ]
+    },
+    "flags": [ "NO_SALVAGE" ]
+    },
+  	  {
+    "id": "scroll_greatfucc_contract",
+    "//": "ID retained to avoid any weirdness.",
+    "type": "TOOL",
+    "name": { "str": "greater demonic contract" },
+    "description": "A contract of demonic make, written upon parchment.  Reading its content loudly will bring forth a greater incubus, to call upon and bound upon a covenant.  Your chance of success will depend on how well you could negotiate a contract with them.",
+    "weight": "415 g",
+    "volume": "250 ml",
+    "material": [ "flesh" ],
+    "symbol": "!",
+    "looks_like": "recipe_creepy",
+    "color": "white",
+    "price": "1500 USD",
+    "price_postapoc": "10 USD",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_greater_incubi",
+      "friendly_msg": "The demon looks down at you imperiously, as if waiting for your  questions.",
+      "hostile_msg": "The demon looks down at you imperiously, wroth written upon its face for your impudence calling them!",
+      "difficulty": 7,
+      "moves": 60,
+      "place_randomly": true,
+      "is_pet": true,
+      "skills": [ "speech", "barter" ]
+    },
+    "flags": [ "NO_SALVAGE" ]
+    },
+  	  {
+    "id": "scroll_greatsucc_contract",
+    "//": "ID retained to avoid any weirdness.",
+    "type": "TOOL",
+    "name": { "str": "greater demonic contract" },
+    "description": "A contract of demonic make, written upon parchment.  Reading its content loudly will bring forth a greater succubus, to call upon and bound upon a covenant.  Your chance of success will depend on how well you could negotiate a contract with them.",
+    "weight": "415 g",
+    "volume": "250 ml",
+    "material": [ "flesh" ],
+    "symbol": "!",
+    "looks_like": "recipe_creepy",
+    "color": "white",
+    "price": "1500 USD",
+    "price_postapoc": "10 USD",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_greater_succubi",
+      "friendly_msg": "The demon looks down at you imperiously, as if waiting for your  questions.",
+      "hostile_msg": "The demon looks down at you imperiously, wroth written upon its face for your impudence calling them!",
+      "difficulty": 7,
+      "moves": 60,
+      "place_randomly": true,
+      "is_pet": true,
+      "skills": [ "speech", "barter" ]
+    },
+    "flags": [ "NO_SALVAGE" ]
+    },
+  	  {
+    "id": "scroll_succow_contract",
+    "//": "ID retained to avoid any weirdness.",
+    "type": "TOOL",
+    "name": { "str": "demonic contract" },
+    "description": "A contract of demonic make, written upon parchment.  Reading its content loudly will bring forth a lactating succubus, to call upon and bound upon a covenant.  Your chance of success will depend on how well you could negotiate a contract with them.",
+    "weight": "415 g",
+    "volume": "250 ml",
+    "material": [ "flesh" ],
+    "symbol": "!",
+    "looks_like": "recipe_creepy",
+    "color": "white",
+    "price": "1500 USD",
+    "price_postapoc": "10 USD",
+    "use_action": {
+      "type": "place_monster",
+      "monster_id": "mon_succubi_lactophilia",
+      "friendly_msg": "The demon looks down at you and smirk, as if daring you to touch her.",
+      "hostile_msg": "The demon looks down at you imperiously, wroth written upon its face for your impudence calling them!",
+      "difficulty": 4,
+      "moves": 60,
+      "place_randomly": true,
+      "is_pet": true,
+      "skills": [ "speech", "barter" ]
+    },
+    "flags": [ "NO_SALVAGE" ]
+    },
+  {
+    "id": "holy_choker",
+    "copy-from": "demonscroll_magic_base",
+    "type": "COMESTIBLE",
+    "name": { "str": "demonic scroll of contract", "str_pl": "demonic scrolls of contract" },
+    "description": "This is a scroll, with unfamiliar scripts written upon images of hellish creatures under orgy of death, rapine fest, and murder.  Using this contract, it might be possible to bind demonic creatures to your will, either permanently or temporarily, you don't know.  The sudden impact of projecting your mind with such infernal magick will painfully stun and singe you, however.",
+    "price": "140 USD",
+    "price_postapoc": "50 USD",
+    "use_action": { "type": "cast_spell", "spell_id": "hell_contract_hentai", "no_fail": true, "level": 0 }
+  },
+      {
+    "id": "daemonpreg_fluidwear",
+    "type": "TOOL_ARMOR",
+    "category": "clothing",
+    "symbol": "O",
+    "drop_action": { "type": "emit_actor" },
+    "name": { "str": "daemonic fluid", "str_pl": "daemonic fluid" },
+    "description": "This is a goop of demonic semen *inside* you. You can try to clean it off from yourself.",
+    "flags": [ "TRADER_AVOID", "NO_TAKEOFF", "ZERO_WEIGHT" ],
+    "weight": "0 g",
+    "volume": "0 ml",
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [ { "value": "BONUS_DODGE", "add": -1 } ],
+          "ench_effects": [ { "effect": "demonpregger_effect", "intensity": 1 } ]
+        }
+      ]
+    },
+    "use_action": [
+    {
+      "type": "transform",
+      "msg": "You scooped it out from yourself.",
+      "target": "d_cum_antiexploit",
+	  "need_charges": 1,
+	  "need_charges_msg": "Not enough soap to cleanse off the filth.",
+	  "moves": 1000
+    }
+    ],
+    "material": [ "flesh" ],
+    "warmth": 1,
+	"max_charges": 1,
+    "initial_charges": 1,
+	"charges_per_use": 1,
+	"ammo": "demonic_sperm_type"
+  },
+      {
+    "id": "daemonpreg_fluidwear_fert",
+    "type": "TOOL_ARMOR",
+    "category": "clothing",
+    "symbol": "O",
+    "drop_action": { "type": "emit_actor" },
+    "name": { "str": "daemonic fluid", "str_pl": "daemonic fluid" },
+    "description": "This is a goop of demonic semen *inside* you. You can try to clean it off from yourself.",
+    "flags": [ "TRADER_AVOID", "NO_TAKEOFF", "ZERO_WEIGHT" ],
+    "weight": "0 g",
+    "volume": "0 ml",
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [ { "value": "BONUS_DODGE", "add": -1 } ],
+          "ench_effects": [ { "effect": "demonpregger_effect", "intensity": 1 } ]
+        }
+      ]
+    },
+    "use_action": [
+    {
+      "type": "transform",
+      "msg": "You fail to scoop it out from yourself.",
+      "target": "daemonpreg_actual",
+      "active": true,
+	  "need_charges": 1,
+	  "need_charges_msg": "Not enough soap to cleanse off the filth.",
+	  "moves": 1000
+    }
+    ],
+    "material": [ "flesh" ],
+    "warmth": 1,
+	"max_charges": 1,
+    "initial_charges": 1,
+	"charges_per_use": 1
+  },
+  {
+    "id": "daemonpreg_actual",
+    "type": "TOOL_ARMOR",
+    "category": "clothing",
+    "symbol": "O",
+    "name": { "str": "demonic gestation", "str_pl": "demonic gestations" },
+    "description": "This is a demonic gestation, a mockery of human pregnancy growing upon your flesh. Its unnaturalness inflicts you with the utmost unwholesome growth, like a tumorous growth. Always moving. Crawling in your torso like a maggot.",
+    "flags": [ "TRADER_AVOID", "NO_DROP", "NO_TAKEOFF", "ZERO_WEIGHT" ],
+    "weight": "0 g",
+    "volume": "0 ml",
+    "covers": [ "torso" ],
+    "relic_data": {
+      "passive_effects": [
+        {
+          "has": "WORN",
+          "condition": "ALWAYS",
+          "values": [ { "value": "BONUS_DODGE", "add": -2 } ],
+          "ench_effects": [ { "effect": "demonpregger_effect", "intensity": 2 } ]
+        }
+      ]
+    },
+    "material": [ "flesh" ],
+    "warmth": 10,
+    "coverage": 25,
+	"encumbrance": 15,
+	"max_charges": 3,
+    "initial_charges": 3,
+	"turns_per_charge": 64800,
+	"//": "was 1 item w 9 charge, now separated in 3. Turn/charge is da same tho.",
+	"revert_to": "daemonpreg_birth_item"
+  },
+  {
+    "id": "daemonpreg_birth_item",
+    "type": "TOOL",
+    "material": [ "flesh" ],
+    "symbol": "b",
+    "name": { "str": "Completed gestation", "str_pl": "Completed gestation" },
+    "description": "A pregnancy come to full term. Activate to give birth.",
+    "flags": [ "TRADER_AVOID", "NO_INGEST", "ONLY_ONE", "ZERO_WEIGHT" ],
+    "use_action": {
+		"type": "place_monster",
+		"monster_id": "mon_lessor_demonbase",
+		"place_randomly": false,
+		"is_pet": true,
+		"moves": 10
+	}
+  }
+]

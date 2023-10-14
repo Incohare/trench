@@ -1,0 +1,241 @@
+[
+    {
+    "id": "COOMTRAIL_EFFER",
+    "type": "ammo_effect",
+    "trail": { "field_type": "fd_coominvi" }
+  },
+    {
+    "id": "morale_evilpreg",
+    "type": "morale_type",
+    "text": "Demonic vessel parasite",
+    "permanent": true
+  },
+  	{
+    "id": "morale_corruptlewd",
+    "type": "morale_type",
+    "text": "Unnaturaly stoked passion",
+    "permanent": true
+	},
+      {
+    "id": "fd_coominvi",
+    "type": "field_type",
+    "intensity_levels": [
+      {
+        "name": "spunk",
+        "sym": "~",
+        "dangerous": false,
+        "translucency": 1,
+        "effects": [
+          {
+            "effect_id": "corrupt_demoneff",
+            "body_part": "torso",
+            "min_duration": "2 seconds",
+            "max_duration": "36000 seconds",
+            "immune_inside_vehicle": true
+          },
+          {
+            "effect_id": "lust_demoneff",
+            "body_part": "torso",
+            "min_duration": "1800 seconds",
+            "max_duration": "36000 seconds",
+            "immune_inside_vehicle": true
+          }
+        ],
+        "convection_temperature_mod": -1
+      }
+    ],
+    "immunity_data": { "traits": [ "DEMONICNAT" ] },
+    "priority": 8,
+    "half_life": "12 seconds",
+    "phase": "liquid",
+    "display_items": true,
+    "display_field": false
+  },
+	{
+		"type": "effect_type",
+		"id": "lust_demoneff",
+		"name" : ["Horny"],
+		"desc": ["You are currently feeling the most base and primal desire as a living being.  In short, you want to cum."],
+		"rating": "bad",
+		"show_in_info": true,
+		"max_intensity" : 100,
+        "int_decay_tick": 300,
+		"morale": "morale_corruptlewd",
+		"apply_message": "You are desperately enduring the urge to climax…",
+		"base_mods": {
+			"stamina_min": [ -0.1 ],
+			"morale": [ 5 ]
+		},
+		"scaling_mods": {
+			"stamina_min": [ -0.1 ],
+			"morale": [ -2 ]
+		}
+	},
+		{
+		"type": "effect_type",
+		"id": "corrupt_demoneff",
+		"name" : [
+			"Blushing",
+			"Excited",
+			"Passionate",
+			"Ecstatic",
+			"Euphoric",
+			"Depraved"
+		],
+		"desc": [
+			"You are being swayed by your sensual desires.  Your arousal is making you a little stronger and your senses sharper, but it's sure making you lose your mind bit by bit.",
+			"You are being influenced by your strong carnal desires.  Everything except your senses has become duller.",
+			"Your intense passion is taking over your thoughts.  Everything except your senses has become duller.",
+			"Your mind is being dominated by your lust.  Everything except your senses has become significantly duller.",
+			"Your mind is being dominated by your lust.  ...But is it that big of a deal?",
+			"Your mind has utterly surrendered to the desire.  But that doesn't sound all that bad, does it?"
+		],
+		"show_in_info": true,
+		"max_intensity" : 6,
+		"apply_message": "You're starting to feel aroused.",
+		"remove_message": "Your carnal desires are gone.",
+		"morale": "morale_corruptlewd",
+		"rating": "bad",
+		"base_mods": {
+			"str_mod": [1],
+			"per_mod": [1],
+			"int_mod": [-1],
+			"speed_mod": [5],
+			"stamina_min": [2],
+			"morale": [10]
+		},
+		"scaling_mods": {
+			"str_mod": [-1.67],
+			"dex_mod": [-0.84],
+			"per_mod": [0.84],
+			"int_mod": [-2],
+			"speed_mod": [-0.4],
+			"stamina_min": [-3],
+			"morale": [ 5 ]
+		}
+	},
+	{
+		"type": "effect_type",
+		"id": "magic_sleep_demoneff",
+		"name" : [
+			"Unbearable Sleepiness",
+			"Common Drowsiness",
+			"About To Fall Asleep"
+		],
+		"desc": ["You are being assailed by a mysterious drowsiness.\nIt won't be a surprise if you lose your consciousness at some point."],
+		"show_in_info": true,
+		"max_intensity" : 3,
+		"apply_message": "You are assailed with a sudden drowsiness...",
+		"remove_message": "The mysterious drowsiness is gone.",
+		"rating": "bad",
+	    "int_decay_tick": 300,
+		"base_mods": {
+			"speed_mod": [-5],
+			"str_mod": [-1],
+			"dex_mod": [-1],
+			"int_mod": [-2],
+			"per_mod": [-2],
+			"sleep_min": [10],
+			"sleep_max": [20],
+			"sleep_chance": [75],
+			"sleep_chance_bot": [100]
+		},
+		"scaling_mods": {
+			"sleep_min": [10],
+			"sleep_max": [20],
+			"sleep_chance": [-36]
+		}
+	},
+  {
+    "type": "effect_type",
+    "id": "succudrain_eff",
+    "name": [ "Drained Physique" ],
+    "desc": [ "Prolonged sexual contact with any form of succubi will result in unnatural fatigue gain." ],
+    "apply_message": "You feel drained by those succubi",
+    "remove_message": "The passage of time have managed to restore your lifeforce to normal.",
+    "rating": "bad",
+    "max_intensity": 200,
+    "base_mods": { 
+      "health_min": [ 1 ],
+      "health_tick": [ 3600 ],
+      "h_mod_min": [ 1 ],
+      "h_mod_tick": [ 3600 ],
+        "fatigue_min": [ 2 ],
+        "fatigue_tick": [ 25 ],
+      "thirst_min": [ 1 ],
+      "thirst_tick": [ 50 ],
+        "hunger_min": [ 1 ],
+        "hunger_tick": [ 35 ] 
+    },
+    "scaling_mods": {
+        "speed_mod": [ -2 ],
+      "health_tick": [ -360, -300 ],
+      "h_mod_tick": [ -360, -300 ]
+    }
+  },
+  {
+    "type": "effect_type",
+    "id": "incuscrew_eff",
+    "name": [ "Sore" ],
+    "desc": [ "Prolonged sexual contact with any form of incubi will result in unnatural pain gain and the expected fatigue." ],
+    "apply_message": "You feel drained by those succubi",
+    "remove_message": "The passage of time have managed to restore your lifeforce to normal.",
+    "rating": "bad",
+    "max_intensity": 200,
+    "base_mods": { 
+      "health_min": [ 1 ],
+      "health_tick": [ 4800 ],
+      "h_mod_min": [ 1 ],
+      "h_mod_tick": [ 4800 ],
+        "fatigue_min": [ 1 ],
+        "fatigue_tick": [ 15 ],
+        "thirst_min": [ 1 ],
+        "thirst_tick": [ 65 ],
+      "pain_min": [ 1 ],
+      "pain_tick": [ 55 ],
+        "hunger_min": [ 1 ],
+        "hunger_tick": [ 25 ] 
+    },
+    "scaling_mods": {
+        "speed_mod": [ -1 ],
+      "health_tick": [ -260, -180 ],
+      "h_mod_tick": [ -260, -180 ]
+      }
+  },
+	{
+		"type": "effect_type",
+		"id": "demonpregger_effect",
+		"apply_memorial_log": "Became pregnant.",
+		"remove_memorial_log": "Gave birth to a baby.", "//": "probably should be handled at lua in case abortion/stillbirth is added",
+		"name": [
+			"Demonic Impregnation",
+			"Demonic Gestation"
+		],
+		"desc": [
+		    "Traces of your defilement still exist inside you.",
+		    "You are currently pregnant."
+		    ],
+		"show_in_info": true,
+		"max_intensity" : 2,
+		"apply_message": "You've been defiled.",
+		"remove_message": "You are free from the nightmare.",
+		"rating": "bad",
+		"morale": "morale_evilpreg",
+		"base_mods": {
+			"hunger_chance": [720],
+			"hunger_min": [1],
+			"thirst_chance": [720],
+			"thirst_min": [1],
+			"speed_mod": [-15],
+			"pain_amount": [ 1 ],
+			"morale": [ -5 ],
+			"vomit_chance": [740]
+		},
+		"scaling_mods": {
+			"pain_amount": [ 3 ],
+			"morale": [ -25 ],
+			"speed_mod": [ -35 ],
+			"vomit_chance": [-250]
+		}
+	}
+]

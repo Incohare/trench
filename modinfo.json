@@ -1,0 +1,11 @@
+[
+	{
+		"type": "MOD_INFO",
+		"ident": "mod_hentai",
+		"name": "Hentai Mod",
+		"authors": [ "Translated by Pedy, Authors: Tamariba No Hentai&Volunteers, Refluffed by yours truly" ],
+		"description": "Did you ever want to have a more *intimate* kind of relationship with your favorite characters?  What about getting molested by lewd creatures?  This mod will not make the first dream come true, we have a mod for that, but it will sure make the second wish true.",
+		"category": "magical",
+		"dependencies": [ "bn" ]
+	}
+]
